@@ -1,4 +1,5 @@
 export type Job = {
+    slug: string;
     title: string;
     company: string;
     start_date: Date;
@@ -7,6 +8,7 @@ export type Job = {
 }
 
 export type Project = {
+    slug: string;
     title: string;
     end_date: Date;
     description: string;

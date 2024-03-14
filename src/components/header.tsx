@@ -5,108 +5,99 @@ import * as React from "react"
 import {
   NavigationMenu,
   NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  NavigationMenuViewport,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import Link from "next/link"
 import Image from "next/image";
+import { ThemeToggle } from "./theme-toggle";
+import { jobs, projects } from "@/lib/data";
 
-const linkStyle = `flex w-full py-2 px-3 justify-between items-center flex-row transition ease-out delay-150 hover:bg-accent`
+const linkStyle = `flex w-full py-2 px-3 justify-between items-center flex-row transition ease-out hover:bg-accent`
 
 function Header() {
+
+  const formatDate = (date: Date) => { // formats MM/YY
+    const month = date.getMonth() + 1;
+    const year = date.getFullYear() % 100;
+    return `${month}/${year}`
+  }
+
+  const jobsList = jobs
+		.toSorted((a, b) => b.start_date.getTime() - a.start_date.getTime())
+		.map(job => 
+			<li key={job.slug}>
+        <Link href={`/experience#${job.slug}`} className={linkStyle}>
+          <p>
+            { job.title }
+          </p>
+          <p className="right-0">{ formatDate(job.start_date) } - { formatDate(job.end_date) }</p>
+        </Link>
+      </li>
+		);
+
+  const projectsList = projects
+    .map(project =>
+      <li key={project.slug}>
+        <Link href={`/projects#${project.slug}`} className={linkStyle}>
+          <p>
+            {project.title}
+          </p>
+        </Link>
+      </li>
+    );
+
   return (
-    <div className="absolute top-0 left-0 flex items-center p-3 w-full shadow-md">
-      <Image
-        src="/react-logo.png"
-        alt="logo"
-        width="50"
-        height="50"
-        priority
-      />
+    <div className="sticky top-0 flex items-center p-3 w-full shadow-md backdrop-blur-lg">
+      <Link href="/">
+        <Image
+          src="/react-logo.png"
+          alt="logo"
+          width="50"
+          height="50"
+          priority
+        />
+      </Link>
       <div className="w-4"></div> {/* padding between image and headers */}
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <Link href="/resume" className="flex w-full justify-between items-center flex-row transition ease-in delay-150 hover:bg-accent">
+            <Link href="/resume" className="flex w-full justify-between items-center flex-row transition-colors hover:text-primary focus:text-primary focus:outline-none disabled:pointer-events-none disabled:opacity-50">
               <p className="text-xl font-medium px-3 py-1">
                 Resume
               </p>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuTrigger className="text-xl">
+            <NavigationMenuTrigger className="text-xl bg-transparent">
               <Link href="/experience">
                 Experience
               </Link>
             </NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid w-[400px] gap-3 p-4 items-stretch">
-                <li>
-                  <Link href="/experience#idtech" className={linkStyle}>
-                    <p>
-                      iD Tech Teacher
-                    </p>
-                    <p className="right-0">5/23 - 8/23</p>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/experience#uc3m" className={linkStyle}>
-                    <p>
-                      UC3M Lab Assistant
-                    </p>
-                    <p className="right-0">6/23 - 8/23</p>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/experience#delineo" className={linkStyle}>
-                    <p>
-                      "Delineo" Pandemic Research
-                    </p>
-                    <p className="right-0">1/23 - 5/23</p>
-                  </Link>
-                </li>
+                { jobsList }
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuTrigger className="text-xl">
+            <NavigationMenuTrigger className="text-xl bg-transparent">
               <Link href="/projects">
                 Projects
               </Link>
             </NavigationMenuTrigger>
             <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 items-stretch">
-                <li>
-                  <Link href="/projects#cppgameengine" className={linkStyle}>
-                    <NavigationMenuLink>
-                      C++ Game Engine
-                    </NavigationMenuLink>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/projects#manhattanmap" className={linkStyle}>
-                    <NavigationMenuLink>
-                      Manhattan Map Project
-                    </NavigationMenuLink>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/projects#portfoliosite" className={linkStyle}>
-                    <NavigationMenuLink>
-                      Portfolio (this website!)
-                    </NavigationMenuLink>
-                  </Link>
-                </li>
+              <ul className="grid w-[400px] gap-3 p-4 items-stretch">
+                { projectsList }
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
+      <div className="flex flex-grow flex-row-reverse justify-start">
+        <ThemeToggle/>
+      </div>
     </div>
   )
 }

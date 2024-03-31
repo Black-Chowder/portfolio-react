@@ -24,18 +24,28 @@ export const projects: Project[] = [
         slug: "cppgameengine",
         title: "C++ Game Engine",
         end_date: new Date(2023, 1, 12),
-        description: "A game I created only using c++ and the SFML library for rendering and audio."
+        description: "A game I created only using c++ and the SFML library for rendering and audio.",
+        links: [
+            "tobbot2.itch.io/tail-smash",
+            "github.com/tobbot2/tailsmash",
+        ]
     },
     {
         slug: "manhattanmap",
         title: "Manhattan Map",
         end_date: new Date(),
-        description: "A wooden lasercut map of Manhattan with LEDs where the subway lines are."
+        description: "A wooden lasercut map of Manhattan with LEDs where the subway lines are.",
+        links: [
+            "github.com/tobbot2/manhattanmap"
+        ]
     },
     {
         slug: "portfoliosite",
         title: "Portfolio Site (this site!)",
         end_date: new Date(),
-        description: "A website I made using React, NextJS, and Shadcn."
+        description: "A website I made using React, NextJS, and Shadcn.",
+        links: [
+            "github.com/tobbot2/portfolio-react",
+        ]
     }
 ]

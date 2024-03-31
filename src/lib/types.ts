@@ -12,4 +12,5 @@ export type Project = {
     title: string;
     end_date: Date;
     description: string;
+    links: string[];
 }

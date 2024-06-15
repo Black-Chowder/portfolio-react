@@ -12,5 +12,11 @@ export type Project = {
     title: string;
     end_date: Date;
     description: string;
+    thumbnail: string;
     links: string[];
+}
+
+export type NavData = {
+    ext: string;
+    name: string;
 }

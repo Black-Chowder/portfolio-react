@@ -1,4 +1,23 @@
-import { Job, Project } from "./types"
+import { Job, Project, NavData } from "./types"
+
+export const navData: NavData[] = [
+    {
+        ext: "/aboutme",
+        name: "About Me",
+    },
+    {
+        ext: "/resume",
+        name: "Resume",
+    },
+    {
+        ext: "/experience",
+        name: "Experience",
+    },
+    {
+        ext: "/projects",
+        name: "Projects",
+    },
+]
 
 export const jobs: Job[] = [
     {
@@ -25,6 +44,7 @@ export const projects: Project[] = [
         title: "C++ Game Engine",
         end_date: new Date(2023, 1, 12),
         description: "Game I created only using C++ and the SFML library for rendering and audio.",
+        thumbnail: "/project-img/TailSmashThumbnail.png",
         links: [
             "tobbot2.itch.io/tail-smash",
             "github.com/tobbot2/tailsmash",
@@ -35,6 +55,7 @@ export const projects: Project[] = [
         title: "Manhattan Map",
         end_date: new Date(),
         description: "Wooden lasercut map of Manhattan with LEDs where the subway lines are.",
+        thumbnail: "",
         links: [
             "github.com/tobbot2/manhattanmap"
         ]
@@ -44,6 +65,7 @@ export const projects: Project[] = [
         title: "Club RC Plane - DBF",
         end_date: new Date(),
         description: "RC plane made by the club I am president of (Design Build Fly).",
+        thumbnail: "",
         links: [
             "https://jhu-dbf-website.pages.dev/" // TODO (probably needs updating when we publish it?) 
         ]
@@ -53,6 +75,7 @@ export const projects: Project[] = [
         title: "Club Website - DBF",
         end_date: new Date(2024, 6, 15),
         description: "Website I led the creation of for the club I am president of (Design Build Fly).",
+        thumbnail: "",
         links: [
             "https://jhu-dbf-website.pages.dev/" // TODO (probably needs updating when we publish it?)
         ]
@@ -62,6 +85,7 @@ export const projects: Project[] = [
         title: "Portfolio Site (this site!)",
         end_date: new Date(),
         description: "Website I made using React, NextJS, and Shadcn.",
+        thumbnail: "",
         links: [
             "github.com/tobbot2/portfolio-react",
         ]
@@ -71,6 +95,7 @@ export const projects: Project[] = [
         title: "Game-Jam Games Collection",
         end_date: new Date(),
         description: "Collection of video games I created in separate game jam events using Unity (C#).",
+        thumbnail: "",
         links: [
             "tobbot2.itch.io", // TODO
         ]
@@ -80,6 +105,7 @@ export const projects: Project[] = [
         title: "Physics Simulations Collection",
         end_date: new Date(2021, 5, 1),
         description: "Collection of physics simulations to teach students in an interactive, \"gamified,\" way.",
+        thumbnail: "",
         links: [
             "github.com/tobbot2/JWSimulations",
             "" // TODO link to actual simulations site.
@@ -90,6 +116,7 @@ export const projects: Project[] = [
         title: "Romanesque Cathedral 3D Model",
         end_date: new Date(2022, 2, 1),
         description: "3D Model created in Blender with heavy research in the Romanesque architecture style.",
+        thumbnail: "",
         links: [
             "thingiverse.com", // TODO
         ]
@@ -99,6 +126,7 @@ export const projects: Project[] = [
         title: "Yearbook Page 3D Render",
         end_date: new Date(2022, 4, 1),
         description: "3D Render created in Blender - a collage of many models I have made by myself over the years.",
+        thumbnail: "",
         links: [
             "thingiverse.com", // TODO
         ]

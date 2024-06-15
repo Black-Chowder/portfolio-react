@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import Header from "@/components/header";
+import Hamburger from "@/components/hamburger";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,7 +26,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <Header />
+          <Hamburger />
+          <main className="flex flex-col justify-self-stretch min-h-screen items-center">
+            {children}
+          </main>
         </ThemeProvider>
       </body>
     </html>

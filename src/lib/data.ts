@@ -7,7 +7,7 @@ export const jobs: Job[] = [
         company: "Charles III University of Madrid",
         start_date: new Date(2023,4,22),
         end_date: new Date(2023,6,26),
-        description: "Pandemic Simulation Research - led by Professor Dr. Dahbura. I headed the Unity sub-team responsible for improving the \"gamified\" version of the simulation. As a team leader, I set deadlines, arranged team meetings and assigned workstreams. Other duties included programming; retrieving, parsing and importing data from the server; bug fixes.",
+        description: "Pandemic Simulation Research - led by Professor Dr. Dahbura. Led the Unity sub-team responsible for improving the \"gamified\" version of the simulation. As a team leader, I set deadlines, arranged team meetings and assigned workstreams. Other duties included programming; retrieving, parsing and importing data from the server; bug fixes.",
     },
     {
         slug: "delineo",
@@ -15,7 +15,7 @@ export const jobs: Job[] = [
         company: "Delineo Pandemic Research",
         start_date: new Date(2023,0,1),
         end_date: new Date(2023,4,12),
-        description: "I was a research lab assistant. I integrated the NVIDIA Cuda toolkit and updated C/C++ functions to improve data sharing for a high performance computer system by utilizing the GPU. I also conducted performance improvement analyses.",
+        description: "Research lab assistant. Integrated the NVIDIA Cuda toolkit and updated C/C++ functions to improve data sharing for a high performance computer system by utilizing the GPU. Conducted performance improvement analysis.",
     },
 ]
 
@@ -24,7 +24,7 @@ export const projects: Project[] = [
         slug: "cppgameengine",
         title: "C++ Game Engine",
         end_date: new Date(2023, 1, 12),
-        description: "A game I created only using c++ and the SFML library for rendering and audio.",
+        description: "Game I created only using C++ and the SFML library for rendering and audio.",
         links: [
             "tobbot2.itch.io/tail-smash",
             "github.com/tobbot2/tailsmash",
@@ -34,18 +34,73 @@ export const projects: Project[] = [
         slug: "manhattanmap",
         title: "Manhattan Map",
         end_date: new Date(),
-        description: "A wooden lasercut map of Manhattan with LEDs where the subway lines are.",
+        description: "Wooden lasercut map of Manhattan with LEDs where the subway lines are.",
         links: [
             "github.com/tobbot2/manhattanmap"
+        ]
+    },
+    {
+        slug: "dbfplane",
+        title: "Club RC Plane - DBF",
+        end_date: new Date(),
+        description: "RC plane made by the club I am president of (Design Build Fly).",
+        links: [
+            "https://jhu-dbf-website.pages.dev/" // TODO (probably needs updating when we publish it?) 
+        ]
+    },
+    {
+        slug: "dbfsite",
+        title: "Club Website - DBF",
+        end_date: new Date(2024, 6, 15),
+        description: "Website I led the creation of for the club I am president of (Design Build Fly).",
+        links: [
+            "https://jhu-dbf-website.pages.dev/" // TODO (probably needs updating when we publish it?)
         ]
     },
     {
         slug: "portfoliosite",
         title: "Portfolio Site (this site!)",
         end_date: new Date(),
-        description: "A website I made using React, NextJS, and Shadcn.",
+        description: "Website I made using React, NextJS, and Shadcn.",
         links: [
             "github.com/tobbot2/portfolio-react",
+        ]
+    },
+    {
+        slug: "gamejams",
+        title: "Game-Jam Games Collection",
+        end_date: new Date(),
+        description: "Collection of video games I created in separate game jam events using Unity (C#).",
+        links: [
+            "tobbot2.itch.io", // TODO
+        ]
+    },
+    {
+        slug: "jwsimulations",
+        title: "Physics Simulations Collection",
+        end_date: new Date(2021, 5, 1),
+        description: "Collection of physics simulations to teach students in an interactive, \"gamified,\" way.",
+        links: [
+            "github.com/tobbot2/JWSimulations",
+            "" // TODO link to actual simulations site.
+        ]
+    },
+    {
+        slug: "cathedral",
+        title: "Romanesque Cathedral 3D Model",
+        end_date: new Date(2022, 2, 1),
+        description: "3D Model created in Blender with heavy research in the Romanesque architecture style.",
+        links: [
+            "thingiverse.com", // TODO
+        ]
+    },
+    {
+        slug: "yearbook",
+        title: "Yearbook Page 3D Render",
+        end_date: new Date(2022, 4, 1),
+        description: "3D Render created in Blender - a collage of many models I have made by myself over the years.",
+        links: [
+            "thingiverse.com", // TODO
         ]
     }
 ]

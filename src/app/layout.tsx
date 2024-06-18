@@ -26,11 +26,15 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
-          <Hamburger />
-          <main className="flex flex-col justify-self-stretch min-h-screen items-center">
-            {children}
-          </main>
+          <div className="flex flex-col h-full min-h-screen">
+
+            {/* Header disables on mobile, Hamburger enables on mobile */}
+            <Header />
+            <Hamburger />
+            <main className="flex flex-col flex-auto items-center">
+                {children}
+            </main>
+          </div>
         </ThemeProvider>
       </body>
     </html>

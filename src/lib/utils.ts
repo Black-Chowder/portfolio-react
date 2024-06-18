@@ -6,23 +6,23 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-export function getProjectTagColor(tag: ProjectTag) {
+export function getProjectTagBorderColor(tag: ProjectTag) {
 	switch (tag) {
 		case "Game":
-			return "darkorange";
+			return "border-[darkorange]";
 		case "3D Design":
-			return "grey";
+			return "border-[grey]";
 		case "Website":
-			return "dodgerblue";
+			return "border-[dodgerblue]";
 		case "Coding":
-			return "limegreen";
+			return "border-[limegreen]";
 		case "Group":
-			return "mediumslateblue";
+			return "border-[mediumslateblue]";
 		case "Solo":
-			return "crimson";
+			return "border-[crimson]";
 		case "Class":
-			return "saddlebrown";
-		case "In Progress":
-			return "khaki";
+			return "border-[saddlebrown]";
+		case "WIP":
+			return "border-[khaki]";
 	}
 }

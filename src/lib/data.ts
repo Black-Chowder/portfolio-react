@@ -2,10 +2,6 @@ import { Job, Project, NavData } from "./types"
 
 export const navData: NavData[] = [
     {
-        ext: "/aboutme",
-        name: "About Me",
-    },
-    {
         ext: "/resume",
         name: "Resume",
     },
@@ -60,7 +56,7 @@ export const projects: Project[] = [
         description: "Wooden lasercut map of Manhattan with LEDs where the subway lines are.",
         thumbnail: "",
         tags: [
-            "Coding", "3D Design", "Solo", "In Progress"
+            "Coding", "3D Design", "Solo", "WIP"
         ],
         links: [
             "github.com/tobbot2/manhattanmap"

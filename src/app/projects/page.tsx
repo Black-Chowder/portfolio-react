@@ -1,26 +1,17 @@
-"use client"
-
 import { projects } from "@/lib/data";
 import { Project, ProjectTag } from "@/lib/types";
-import { getProjectTagColor } from "@/lib/utils";
-import { StarFilledIcon } from "@radix-ui/react-icons";
+import { getProjectTagBorderColor } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 
 function Tag({ tag }: { tag: ProjectTag }) {
-	const color = getProjectTagColor(tag);
+	const color = getProjectTagBorderColor(tag);
 
 	return (
 		<>
-			<p className={`scale-90 md:scale-100 rounded-lg border-solid border-2 md:border-4 text-nowrap px-2 w-min h-12 mx-1 -z-10 backdrop-blur-lg`}>
+			<p className={`scale-90 md:scale-100 rounded-lg border-solid ${color} border-2 md:border-4 text-nowrap px-2 w-min h-12 mx-1 -z-10 backdrop-blur-lg`}>
 				{ tag }
 			</p>
-			<style jsx>{`
-				p {
-					border-color: ${color};
-				}	
-			`}
-			</style>
 		</>
 	)
 }
@@ -40,7 +31,7 @@ function ProjectCard ({
 					height={1000}
 					className="w-full h-full object-cover object-top rounded-t-2xl md:rounded-2xl bg-gradient-to-tl dark:bg-gradient-to-br from-accent to-background [image-rendering:pixelated]"
 				/>
-				<div id="tag-container" className="flex flex-row md:gap-1 absolute -top-8 left-0 w-1/2 p-6">
+				<div id="tag-container" className="flex flex-row md:gap-1 absolute -top-8 left-0 w-[calc(100%-1.5rem)] p-6 overflow-hidden">
 					{ project.tags.map((tag, i) => <Tag key={i} tag={tag} />) }
 				</div>
 			</div>

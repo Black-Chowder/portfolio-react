@@ -13,8 +13,11 @@ export type Project = {
     end_date: Date;
     description: string;
     thumbnail: string;
+    tags: ProjectTag[];
     links: string[];
 }
+
+export type ProjectTag = "Game" | "3D Design" | "Website" | "Coding" | "Group" | "Solo" | "Class" | "In Progress"; 
 
 export type NavData = {
     ext: string;

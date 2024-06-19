@@ -15,9 +15,18 @@ function ExperiencePoint({
 		<div className="flex flex-col max-w-xl"> { /* info section */}
 			<div className="flex flex-col justify-start mb-1">
 				<h1 className="mr-5 font-light text-2xl"> { job.title } </h1>
-				<h3 className="font-light text-xl"> { job.company } </h3>
+				<div className="flex flex-row justify-between items-end">
+					<h3 className="font-light text-xl"> { job.company } </h3>
+					<h5 className="font-light text-base"> { job.location } </h5>
+				</div>
 			</div>
-			<p> { job.description } </p>
+			<ul>
+				{job.description.map((point, i) =>
+				<li key={i} className="relative left-4 list-item list-disc">
+					{point}
+				</li>)}
+			</ul>
+			{/* <p> { job.description } </p> */}
 		</div>
 	</div>
 }
@@ -25,7 +34,7 @@ function ExperiencePoint({
 export default function Experience() {
     return (
 		<div className="flex flex-col flex-grow py-4 px-6 md:px-32 shadow-lg">
-			{jobs.map((job, i) => <ExperiencePoint key={i} job={job} />)}
+			{jobs.map(job => <ExperiencePoint key={job.slug} job={job} />)}
 		</div>
     );
 }

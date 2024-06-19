@@ -2,9 +2,10 @@ export type Job = {
     slug: string;
     title: string;
     company: string;
+    location: string;
     start_date: Date;
     end_date: Date;
-    description: string;
+    description: string[];
 }
 
 export type Project = {

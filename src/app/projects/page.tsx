@@ -32,7 +32,7 @@ function ProjectCard ({
 					className="w-full h-full object-cover object-top rounded-t-2xl md:rounded-2xl bg-gradient-to-tl dark:bg-gradient-to-br from-accent to-background [image-rendering:pixelated]"
 				/>
 				<div id="tag-container" className="flex flex-row md:gap-1 absolute -top-8 left-0 w-[calc(100%-1.5rem)] p-6 overflow-hidden">
-					{ project.tags.map((tag, i) => <Tag key={i} tag={tag} />) }
+					{ project.tags.map(tag => <Tag key={tag} tag={tag} />) }
 				</div>
 			</div>
 			<div className="flex justify-center p-4 pt-0">
@@ -71,7 +71,7 @@ function FeaturedProject({
 				<div className="flex flex-col items-end justify-end col-start-2 z-10">
 					<div className="w-[120%] my-8">
 						<div className="flex flex-row relative -bottom-7 w-full text-base p-2 overflow-hidden">
-							{ project.tags.map((tag, i) => <Tag key={i} tag={tag} /> ) }
+							{ project.tags.map(tag => <Tag key={tag} tag={tag} /> ) }
 						</div>
 						<div className="w-full p-4 bg-card rounded-lg shadow-lg">
 							{ project.description }
@@ -108,7 +108,7 @@ export default function ProjectCatalog() {
 			</h1>
 			<div id="project-list-container"	
 				className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 py-4 pb-40 md:px-32 shadow-lg justify-items-center">
-				{ projects.map((project, i) => <ProjectCard project={project} key={i} />) }
+				{ projects.map(project => <ProjectCard project={project} key={project.slug} />) }
 			</div>
 		</>
     );

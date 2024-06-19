@@ -17,20 +17,56 @@ export const navData: NavData[] = [
 
 export const jobs: Job[] = [
     {
+        slug: "idtech",
+        title: "Camp Instructor",
+        company: "iD Tech",
+        location: "Manhattan, New York",
+        start_date: new Date(2024, 5, 1),
+        end_date: new Date(2024, 7, 1),
+        description: [
+            "Led lessons for a large group of 9-12 year olds on programming for Roblox in Lua. ",
+            "Effectively communicated difficult topics in easy to understand terms. ",
+            "Followed pre-made curriculum and custom projects suited for each child. ",
+            "Ensured safety and engagement for all. "
+        ]
+    },
+    {
         slug: "uc3m",
-        title: "Lab Assistant",
+        title: "Research Lab Assistant",
         company: "Charles III University of Madrid",
+        location: "Madrid, Spain",
         start_date: new Date(2023,4,22),
         end_date: new Date(2023,6,26),
-        description: "Pandemic Simulation Research - led by Professor Dr. Dahbura. Led the Unity sub-team responsible for improving the \"gamified\" version of the simulation. As a team leader, I set deadlines, arranged team meetings and assigned workstreams. Other duties included programming; retrieving, parsing and importing data from the server; bug fixes.",
+        description: [
+            "Integrated the NVIDIA Cuda toolkit and updated C/C++ functions to improve data sharing for a high performance computer system by utilizing the GPU. ",
+            "Conducted performance improvement analysis. ",
+        ]
     },
     {
         slug: "delineo",
-        title: "Game Programmer Team Lead",
-        company: "Delineo Pandemic Research",
+        title: "Research Lab Assistant",
+        company: "Johns Hopkins \"Delineo\" Pandemic Research",
+        location: "Baltimore, Maryland",
         start_date: new Date(2023,0,1),
         end_date: new Date(2023,4,12),
-        description: "Research lab assistant. Integrated the NVIDIA Cuda toolkit and updated C/C++ functions to improve data sharing for a high performance computer system by utilizing the GPU. Conducted performance improvement analysis.",
+        description: [
+            "Pandemic Simulation Research - led by Professor Dr. Dahbura. ",
+            "Led the Unity sub-team responsible for improving the \"gamified\" version of the simulation. ",
+            "As a team leader, I set deadlines, arranged team meetings and assigned workstreams. ",
+            "Other duties included programming; retrieving, parsing and importing data from the server; bug fixes. ",
+        ]
+    },
+    {
+        slug: "mgagolf",
+        title: "Intern",
+        company: "Metropolitan Golf Association",
+        location: "White Plains, New York",
+        start_date: new Date(2022, 4, 1),
+        end_date: new Date(2022, 5, 1),
+        description: [
+            "Streamlined data pipelines for updating information and fixed bugs on website. ",
+            "Utilized PivotTables in Excel to aggregate decades of tournament data for easy analysis and manipulation. "
+        ]
     },
 ]
 

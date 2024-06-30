@@ -1,4 +1,4 @@
-import { projects } from "@/lib/data";
+import { getAllProjectsMetadata } from '@/lib/projects';
 import { Project, ProjectTag } from "@/lib/types";
 import { getProjectTagBorderColor } from "@/lib/utils";
 import Image from "next/image";
@@ -92,7 +92,8 @@ function FeaturedProject({
 }
 
 export default function ProjectCatalog() {
-	const featuredProject = projects.find(project => project.slug === "cppgameengine" )
+	const allProjectsMetadata = getAllProjectsMetadata();
+	const featuredProject = allProjectsMetadata.find(project => project.slug === "cppgameengine" )
     return (
 		<>
 			{featuredProject ?
@@ -108,7 +109,7 @@ export default function ProjectCatalog() {
 			</h1>
 			<div id="project-list-container"	
 				className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 py-4 pb-40 md:px-32 shadow-lg justify-items-center">
-				{ projects.map(project => <ProjectCard project={project} key={project.slug} />) }
+				{ allProjectsMetadata.map(project => <ProjectCard project={project} key={project.slug} />) }
 			</div>
 		</>
     );

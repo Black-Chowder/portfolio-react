@@ -1,14 +1,14 @@
-"use client"
+import { getProjectData } from '@/lib/projects';
+import { MDXRemote } from 'next-mdx-remote/rsc'
 
-import { useParams } from "next/navigation"
-
-
-export default function ProjectPage() {
-    const params = useParams();
+export default function ProjectPage({ params }: { params: { slug: string }}) {
     const { slug } = params;
+
+    const markdown = getProjectData(slug); 
+
     return (
         <>
-            <p>This slug is {slug}</p>
+            <MDXRemote source={markdown} />
         </>
     )
 }

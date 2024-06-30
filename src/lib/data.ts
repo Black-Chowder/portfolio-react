@@ -22,12 +22,12 @@ export const jobs: Job[] = [
         company: "iD Tech",
         location: "Manhattan, New York",
         start_date: new Date(2024, 5, 1),
-        end_date: new Date(2024, 7, 1),
+        end_date: new Date(), //new Date(2024, 7, 1),
         description: [
-            "Led lessons for a large group of 9-12 year olds on programming for Roblox in Lua. ",
+            "Led lessons for groups of 9-12 year olds on programming for Roblox in Lua. ",
             "Effectively communicated difficult topics in easy to understand terms. ",
-            "Followed pre-made curriculum and custom projects suited for each child. ",
-            "Ensured safety and engagement for all. "
+            "Created custom projects suited for each child. ",
+            "Attentively ensured the safety and engagement of all students. "
         ]
     },
     {
@@ -38,8 +38,9 @@ export const jobs: Job[] = [
         start_date: new Date(2023,4,22),
         end_date: new Date(2023,6,26),
         description: [
-            "Integrated the NVIDIA Cuda toolkit and updated C/C++ functions to improve data sharing for a high performance computer system by utilizing the GPU. ",
-            "Conducted performance improvement analysis. ",
+            "Integrated the NVIDIA Cuda toolkit in a high performance computer system. ",
+            "Updated C functions to improve data sharing between nodes by utilizing the GPU. ",
+            "Conducted performance improvement analysis and unit testing. ",
         ]
     },
     {
@@ -51,9 +52,9 @@ export const jobs: Job[] = [
         end_date: new Date(2023,4,12),
         description: [
             "Pandemic Simulation Research - led by Professor Dr. Dahbura. ",
-            "Led the Unity sub-team responsible for improving the \"gamified\" version of the simulation. ",
+            "Led the Unity sub-team which improved the \"gamified\" version of the simulation. ",
             "As a team leader, I set deadlines, arranged team meetings and assigned workstreams. ",
-            "Other duties included programming; retrieving, parsing and importing data from the server; bug fixes. ",
+            "Coded new features to the existing codebase such as sanitizing retrieved server data. ",
         ]
     },
     {
@@ -64,8 +65,8 @@ export const jobs: Job[] = [
         start_date: new Date(2022, 4, 1),
         end_date: new Date(2022, 5, 1),
         description: [
-            "Streamlined data pipelines for updating information and fixed bugs on website. ",
-            "Utilized PivotTables in Excel to aggregate decades of tournament data for easy analysis and manipulation. "
+            "Updated website by streamlining data pipelines for renewing information and fixing various bugs. ",
+            "Condensed decades of tournament data for easy analysis and manipulation using Excel formulas. "
         ]
     },
 ]

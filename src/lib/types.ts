@@ -8,6 +8,17 @@ export type Job = {
     description: string[];
 }
 
+export type FeaturedProject = {
+    slug: string;
+    title: string;
+    end_date: Date;
+    description: string;
+    thumbnail: string;
+    img1: string;
+    tags: ProjectTag[];
+    links: string[];
+}
+
 export type Project = {
     slug: string;
     title: string;

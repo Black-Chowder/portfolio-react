@@ -1,4 +1,4 @@
-import { Job, Project, NavData } from "./types"
+import { Job, Project, NavData, FeaturedProject } from "./types"
 
 export const navData: NavData[] = [
     {
@@ -71,7 +71,23 @@ export const jobs: Job[] = [
     },
 ]
 
-export const projects: Project[] = [
+export const featuredProjectMetadata: FeaturedProject = {
+    slug: "cppgameengine",
+    title: "C++ Game Engine",
+    end_date: new Date(2023, 1, 12),
+    description: "Game I created only using C++ and the SFML library for rendering and audio.",
+    thumbnail: "/project-img/TailSmashThumbnail.png",
+    img1: "/project-img/TailSmashThumbnail.png",
+    tags: [
+        "Coding", "Game", "Solo",
+    ],
+    links: [
+        "tobbot2.itch.io/tail-smash",
+        "github.com/tobbot2/tailsmash",
+    ]
+}
+
+export const projectsMetadata: Project[] = [
     {
         slug: "cppgameengine",
         title: "C++ Game Engine",

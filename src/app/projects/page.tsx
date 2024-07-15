@@ -1,6 +1,6 @@
-import { getAllProjectsMetadata } from '@/lib/projects';
 import { Project, ProjectTag } from "@/lib/types";
 import { getProjectTagBorderColor } from "@/lib/utils";
+import { projectsMetadata } from "@/lib/data";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -22,7 +22,7 @@ function ProjectCard ({
 	project: Project,
 }){
     return (
-		<Link href={`/projects/${project.slug}`} className="flex flex-col justify-center items-center md:-mb-20 w-full h-full md:hover:scale-105 transition-all">
+		<Link href={`/projects/view?id=${project.slug}`} className="flex flex-col justify-center items-center md:-mb-20 w-full h-full md:hover:scale-105 transition-all">
 			<div className="flex w-full aspect-[16/10] relative md:-bottom-20 -z-10 px-4 pt-4 md:p-4">
 				<Image
 					src={project.thumbnail ? project.thumbnail : "/react-logo.png"}
@@ -54,7 +54,7 @@ function FeaturedProject({
 }) {
 	return (
 		<>
-			<Link id="featured-project" href={`/projects/${project.slug}`} className='grid w-2/3 mb-8 grid-cols-[5fr_2fr]'>
+			<Link id="featured-project" href={`/projects/view?id=${project.slug}`} className='grid w-2/3 mb-8 grid-cols-[5fr_2fr]'>
 				<div className="flex flex-col items-center col-start-1">
 					<h1 className="relative top-5 hover:text-primary transition-all py-4 px-16 w-min h-min rounded-lg shadow-lg backdrop-blur-xl text-5xl text-nowrap z-10">
 						{project.title}
@@ -92,8 +92,7 @@ function FeaturedProject({
 }
 
 export default function ProjectCatalog() {
-	const allProjectsMetadata = getAllProjectsMetadata();
-	const featuredProject = allProjectsMetadata.find(project => project.slug === "cppgameengine" )
+	const featuredProject = projectsMetadata.find(project => project.slug === "cppgameengine" )
     return (
 		<>
 			{featuredProject ?
@@ -109,7 +108,7 @@ export default function ProjectCatalog() {
 			</h1>
 			<div id="project-list-container"	
 				className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 py-4 pb-40 md:px-32 shadow-lg justify-items-center">
-				{ allProjectsMetadata.map(project => <ProjectCard project={project} key={project.slug} />) }
+				{ projectsMetadata.map(project => <ProjectCard project={project} key={project.slug} />) }
 			</div>
 		</>
     );

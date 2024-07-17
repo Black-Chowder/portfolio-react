@@ -76,8 +76,8 @@ export const featuredProjectMetadata: FeaturedProject = {
     title: "C++ Game Engine",
     end_date: new Date(2023, 1, 12),
     description: "Game I created only using C++ and the SFML library for rendering and audio.",
-    thumbnail: "/project-img/TailSmashThumbnail.png",
-    img1: "/project-img/TailSmashThumbnail.png",
+    thumbnail: "/projects/cppgameengine/TailSmashThumbnail.png",
+    img1: "/projects/cppgameengine/TailSmashThumbnail.png",
     tags: [
         "Coding", "Game", "Solo",
     ],
@@ -93,7 +93,7 @@ export const projectsMetadata: Project[] = [
         title: "C++ Game Engine",
         end_date: new Date(2023, 1, 12),
         description: "Game I created only using C++ and the SFML library for rendering and audio.",
-        thumbnail: "/project-img/TailSmashThumbnail.png",
+        thumbnail: "/projects/cppgameengine/TailSmashThumbnail.png",
         tags: [
             "Coding", "Game", "Solo",
         ],

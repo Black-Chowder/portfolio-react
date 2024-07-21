@@ -1,8 +1,11 @@
-import { Project, ProjectTag } from "@/lib/types";
-import { getProjectTagBorderColor } from "@/lib/utils";
-import { projectsMetadata } from "@/lib/data";
+'use client'
+
+import { FeaturedProject, Project, ProjectTag } from "@/lib/types";
+import { getProjectTagBorderColor, useIsVisible } from "@/lib/utils";
+import { featuredProjectMetadata, projectsMetadata } from "@/lib/data";
 import Image from "next/image";
 import Link from "next/link";
+import { useRef } from "react";
 
 function Tag({ tag }: { tag: ProjectTag }) {
 	const color = getProjectTagBorderColor(tag);
@@ -21,8 +24,11 @@ function ProjectCard ({
 }: {
 	project: Project,
 }){
+	const ref1 = useRef();
+    const isVisible = useIsVisible(ref1);
+
     return (
-		<Link href={`/projects/view?id=${project.slug}`} className="flex flex-col justify-center items-center md:-mb-20 w-full h-full md:hover:scale-105 transition-all">
+		<Link ref={ref1} href={`/projects/view?id=${project.slug}`} className={`flex flex-col justify-center items-center md:-mb-20 w-full h-full md:hover:scale-105 transition-all ease-out duration-200 ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-0"}`}>
 			<div className="flex w-full aspect-[16/10] relative md:-bottom-20 -z-10 px-4 pt-4 md:p-4">
 				<Image
 					src={project.thumbnail ? project.thumbnail : "/react-logo.png"}
@@ -47,10 +53,10 @@ function ProjectCard ({
     )
 }
 
-function FeaturedProject({
+function FeaturedProjectCard({
 	project
 }: {
-	project: Project
+	project: FeaturedProject
 }) {
 	return (
 		<>
@@ -77,9 +83,9 @@ function FeaturedProject({
 							{ project.description }
 						</div>
 					</div>
-					<div className="w-[120%] relative top-8">
+					<div className="w-[120%] relative top-8 scale-125">
 						<Image
-							src={project.thumbnail ? project.thumbnail : "/react-logo.png"}
+							src={project.img1 ? project.img1 : "/react-logo.png"}
 							alt={`${project.title} thumbnail`}
 							width={1000}
 							height={1000}
@@ -92,15 +98,14 @@ function FeaturedProject({
 }
 
 export default function ProjectCatalog() {
-	const featuredProject = projectsMetadata.find(project => project.slug === "cppgameengine" )
     return (
 		<>
-			{featuredProject ?
+			{featuredProjectMetadata ?
 				<div className="hidden md:flex w-full flex-col justify-center items-center">
 					<h1 className="flex w-full mt-8 text-lg text-center text-muted-foreground justify-center">
 						~ Featured Project ~
 					</h1>
-					<FeaturedProject project={featuredProject} />
+					<FeaturedProjectCard project={featuredProjectMetadata} />
 				</div>
 			: null}
 			<h1 className="flex w-full mt-8 text-lg text-center text-muted-foreground justify-center">

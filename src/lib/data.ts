@@ -75,9 +75,9 @@ export const featuredProjectMetadata: FeaturedProject = {
     slug: "cppgameengine",
     title: "C++ Game Engine",
     end_date: new Date(2023, 1, 12),
-    description: "Game I created only using C++ and the SFML library for rendering and audio.",
+    description: "Game I created only using C++ and the SFML library for rendering and audio. Source code is on GitHub, or play it on Itch.io! Click for more info.",
     thumbnail: "/projects/cppgameengine/TailSmashThumbnail.png",
-    img1: "/projects/cppgameengine/TailSmashThumbnail.png",
+    img1: "/projects/cppgameengine/TailSmashAsteroids.png",
     tags: [
         "Coding", "Game", "Solo",
     ],
@@ -103,24 +103,11 @@ export const projectsMetadata: Project[] = [
         ]
     },
     {
-        slug: "manhattanmap",
-        title: "Manhattan Map",
-        end_date: new Date(),
-        description: "Wooden lasercut map of Manhattan with LEDs where the subway lines are.",
-        thumbnail: "",
-        tags: [
-            "Coding", "3D Design", "Solo", "WIP"
-        ],
-        links: [
-            "github.com/tobbot2/manhattanmap"
-        ]
-    },
-    {
         slug: "dbfplane",
         title: "Club RC Plane - DBF",
         end_date: new Date(),
         description: "RC plane made by the club I am president of (Design Build Fly).",
-        thumbnail: "",
+        thumbnail: "/projects/dbfplane/thumbnail.jpg",
         tags: [
             "Group", "3D Design"
         ],
@@ -165,6 +152,19 @@ export const projectsMetadata: Project[] = [
         ],
         links: [
             "tobbot2.itch.io", // TODO
+        ]
+    },
+    {
+        slug: "manhattanmap",
+        title: "Manhattan Map",
+        end_date: new Date(),
+        description: "Wooden lasercut map of Manhattan with LEDs where the subway lines are.",
+        thumbnail: "/projects/manhattanmap/thumbnail.jpg",
+        tags: [
+            "Coding", "3D Design", "Solo", "WIP"
+        ],
+        links: [
+            "github.com/tobbot2/manhattanmap"
         ]
     },
     {

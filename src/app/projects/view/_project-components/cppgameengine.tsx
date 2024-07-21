@@ -22,6 +22,7 @@ function Overview() {
                     alt='gif of some gameplay'
                     width={500}
                     height={0}
+                    unoptimized
                     >
                 </Image>
                 <Image

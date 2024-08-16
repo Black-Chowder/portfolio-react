@@ -21,9 +21,9 @@ const useMousePosition = () => {
 };
 
 export default function Background() {
-    const canvasRef = useRef(null)
+    const canvasRef = useRef(null);
 
-    let mousePos = useMousePosition()
+    let mousePos = useMousePosition();
 
     const hexagon = (ctx: CanvasRenderingContext2D, x: number, y: number, r: number) => {     
         ctx.beginPath();

@@ -5,7 +5,7 @@ import { getProjectTagBorderColor, useIsVisible } from "@/lib/utils";
 import { featuredProjectMetadata, projectsMetadata } from "@/lib/data";
 import Image from "next/image";
 import Link from "next/link";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 function Tag({ tag }: { tag: ProjectTag }) {
 	const color = getProjectTagBorderColor(tag);
@@ -24,18 +24,26 @@ function ProjectCard ({
 }: {
 	project: Project,
 }){
-	const ref1 = useRef();
+	const ref1: any = useRef(null);
     const isVisible = useIsVisible(ref1);
 
+	// keeps it visible once it has been rendered once
+	const [rendered, setRendered] = useState(false);
+	useEffect(() => {
+		if (isVisible) {
+			setRendered(true);
+		}
+	})
+
     return (
-		<Link ref={ref1} href={`/projects/view?id=${project.slug}`} className={`flex flex-col justify-center items-center md:-mb-20 w-full h-full md:hover:scale-105 transition-all ease-out duration-200 ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-0"}`}>
+		<Link ref={ref1} href={`/projects/view?id=${project.slug}`} className={`flex flex-col justify-center items-center md:-mb-20 w-full h-full md:hover:scale-105 transition-all ease-out duration-200 ${rendered ? "opacity-100 scale-100" : "opacity-0 scale-0"}`}>
 			<div className="flex w-full aspect-[16/10] relative md:-bottom-20 -z-10 px-4 pt-4 md:p-4">
 				<Image
 					src={project.thumbnail ? project.thumbnail : "/react-logo.png"}
 					alt={`${project.title} thumbnail`}
 					width={1000}
 					height={1000}
-					className="w-full h-full object-cover object-top rounded-t-2xl md:rounded-2xl bg-gradient-to-tl dark:bg-gradient-to-br from-accent to-background [image-rendering:pixelated]"
+					className="w-full h-full object-cover object-top rounded-t-2xl md:rounded-2xl bg-gradient-to-tl dark:bg-gradient-to-br from-accent to-background"
 				/>
 				<div id="tag-container" className="flex flex-row md:gap-1 absolute -top-8 left-0 w-[calc(100%-1.5rem)] p-6 overflow-hidden">
 					{ project.tags.map(tag => <Tag key={tag} tag={tag} />) }
@@ -70,8 +78,8 @@ function FeaturedProjectCard({
 						alt={`${project.title} thumbnail`}
 						width={500}
 						height={500}
-						
-						className="w-full transition-transform col-start-1 col-end-4 row-start-1 row-end-3 [image-rendering:pixelated]"
+						quality={25}
+						className="w-full transition-transform col-start-1 col-end-4 row-start-1 row-end-3"
 						/>
 				</div>
 				<div className="flex flex-col items-end justify-end col-start-2 z-10">

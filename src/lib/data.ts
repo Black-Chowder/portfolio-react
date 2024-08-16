@@ -120,7 +120,7 @@ export const projectsMetadata: Project[] = [
         title: "Club Website - DBF",
         end_date: new Date(2024, 6, 15),
         description: "Website I led the creation of for the club I am president of (Design Build Fly).",
-        thumbnail: "",
+        thumbnail: "/projects/dbfsite/homepage.jpg",
         tags: [
             "Group", "Coding", "Website"
         ],
@@ -130,10 +130,10 @@ export const projectsMetadata: Project[] = [
     },
     {
         slug: "portfoliosite",
-        title: "Portfolio Site (this site!)",
+        title: "Portfolio Site (this!)",
         end_date: new Date(),
         description: "Website I made using React, NextJS, and Shadcn.",
-        thumbnail: "",
+        thumbnail: "/projects/portfoliosite/homepage.png",
         tags: [
             "Coding", "Solo", "Website"
         ],
@@ -143,10 +143,10 @@ export const projectsMetadata: Project[] = [
     },
     {
         slug: "gamejams",
-        title: "Game-Jam Games Collection",
+        title: "Game-Jam Collection",
         end_date: new Date(),
         description: "Collection of video games I created in separate game jam events using Unity (C#).",
-        thumbnail: "",
+        thumbnail: "/projects/gamejams/thumbnail.png",
         tags: [
             "Coding", "Game", "Group"
         ],
@@ -167,26 +167,26 @@ export const projectsMetadata: Project[] = [
             "github.com/tobbot2/manhattanmap"
         ]
     },
-    {
-        slug: "jwsimulations",
-        title: "Physics Simulations Collection",
-        end_date: new Date(2021, 5, 1),
-        description: "Collection of physics simulations to teach students in an interactive, \"gamified,\" way.",
-        thumbnail: "",
-        tags: [
-            "Coding", "Solo", "Class"
-        ],
-        links: [
-            "github.com/tobbot2/JWSimulations",
-            "" // TODO link to actual simulations site.
-        ]
-    },
+    // {
+    //     slug: "jwsimulations",
+    //     title: "Physics Simulations",
+    //     end_date: new Date(2021, 5, 1),
+    //     description: "Collection of physics simulations to teach students in an interactive, \"gamified,\" way.",
+    //     thumbnail: "",
+    //     tags: [
+    //         "Coding", "Solo", "Class"
+    //     ],
+    //     links: [
+    //         "github.com/tobbot2/JWSimulations",
+    //         "" // TODO link to actual simulations site.
+    //     ]
+    // },
     {
         slug: "cathedral",
-        title: "Romanesque Cathedral 3D Model",
+        title: "Cathedral 3D Model",
         end_date: new Date(2022, 2, 1),
-        description: "3D Model created in Blender with heavy research in the Romanesque architecture style.",
-        thumbnail: "",
+        description: "3D Model created in Blender with heavy research in Romanesque architecture.",
+        thumbnail: "/projects/cathedral/Classic.png",
         tags: [
             "3D Design", "Solo"
         ],
@@ -195,11 +195,11 @@ export const projectsMetadata: Project[] = [
         ]
     },
     {
-        slug: "yearbook",
-        title: "Yearbook Page 3D Render",
+        slug: "3dmodeling",
+        title: "Miscellaneous 3D Models",
         end_date: new Date(2022, 4, 1),
-        description: "3D Render created in Blender - a collage of many models I have made by myself over the years.",
-        thumbnail: "",
+        description: "3D Models and renders created in Blender I have made by myself over the years.",
+        thumbnail: "/projects/3dmodeling/bluejaycampsite.png",
         tags: [
             "3D Design", "Solo"
         ],

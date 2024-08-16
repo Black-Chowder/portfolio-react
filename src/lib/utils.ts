@@ -13,8 +13,7 @@ export function useIsVisible(ref: any) {
     useEffect(() => {
       const observer = new IntersectionObserver(([entry]) => {
           setIntersecting(entry.isIntersecting)
-      } 
-      );
+      });
       
       observer.observe(ref.current);
       return () => {

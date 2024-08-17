@@ -67,7 +67,7 @@ export default function Experience() {
 	}
 
     return (
-		<div className="flex flex-col flex-grow py-4 px-6 md:px-32 shadow-lg">
+		<div className="flex flex-col flex-grow py-4 px-6 md:px-32 bg-opacity-70 backdrop-blur-sm shadow-lg dark:shadow-neutral-800">
 			<h1 className="flex w-full my-12 justify-center text-4xl font-medium">
 				Work Experience
 			</h1>

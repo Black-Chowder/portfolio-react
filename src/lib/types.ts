@@ -1,3 +1,6 @@
+import { IconProps } from "@radix-ui/react-icons/dist/types";
+import { ForwardRefExoticComponent, RefAttributes } from "react";
+
 export type Job = {
     slug: string;
     title: string;
@@ -34,4 +37,10 @@ export type ProjectTag = "Game" | "3D Design" | "Website" | "Coding" | "Group" |
 export type NavData = {
     ext: string;
     name: string;
+}
+
+export type HyperlinkData = {
+    text: string;
+    href: string;
+    icon: React.JSX.Element,
 }

@@ -78,8 +78,8 @@ function FeaturedProjectCard({
 						alt={`${project.title} thumbnail`}
 						width={500}
 						height={500}
-						quality={25}
-						className="w-full transition-transform col-start-1 col-end-4 row-start-1 row-end-3"
+						quality={100}
+						className="w-full transition-transform col-start-1 col-end-4 row-start-1 row-end-3 [image-rendering:pixelated]"
 						/>
 				</div>
 				<div className="flex flex-col items-end justify-end col-start-2 z-10">

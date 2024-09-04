@@ -30,7 +30,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="flex flex-col h-full min-h-screen">
+          <div className="flex flex-col h-full min-h-screen overflow-hidden font-raleway">
 
             {/* Header disables on mobile, Hamburger enables on mobile */}
             <Header />

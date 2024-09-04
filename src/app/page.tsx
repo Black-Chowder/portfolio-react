@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { projectsMetadata } from "@/lib/data";
-import Hyperlinks from "@/components/hyperlinks";
+import Contact from "@/components/contact";
 import { TbBrandGithub, TbBrandLinkedin, TbBrandItch, TbPhone, TbMail} from 'react-icons/tb'
 
 export default function Home() {
@@ -13,7 +13,7 @@ export default function Home() {
 		<>
 			<div className="flex flex-col md:flex-row md:m-10 justify-center gap-8">
 				<div className="flex justify-center flex-col rounded-xl">
-					<h1 className="flex justify-center text-center border-accent border-solid border-2 rounded-xl text-6xl bg-transparent backdrop-blur-sm p-4 mt-8 mb-0 z-10">Hello, I&apos;m Trevor</h1>
+					<h1 className="flex justify-center font-besley text-center border-accent border-solid border-2 rounded-xl text-6xl bg-transparent backdrop-blur-sm p-4 mt-8 mb-0 z-10">Hello, I&apos;m Trevor</h1>
 					<Image
 						src="/portrait.jpg"
 						alt="Image of me, Trevor"
@@ -46,7 +46,7 @@ export default function Home() {
 					</div>
 				</div>
 			</div>
-			<Hyperlinks
+			<Contact
 				links={[
 					{ href: 'mailto:trevoroblack@gmail.com', text: 'trevoroblack@gmail.com', icon: <TbMail/>},
 					{ href: 'tel:+19174288262', text: '917-428-8262', icon: <TbPhone/>},

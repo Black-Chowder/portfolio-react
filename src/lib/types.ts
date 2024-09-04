@@ -39,7 +39,7 @@ export type NavData = {
     name: string;
 }
 
-export type HyperlinkData = {
+export type ContactData = {
     text: string;
     href: string;
     icon: React.JSX.Element,

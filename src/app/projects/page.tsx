@@ -36,7 +36,7 @@ function ProjectCard ({
 	})
 
     return (
-		<Link ref={ref1} href={`/projects/view?id=${project.slug}`} className={`flex flex-col justify-center items-center md:-mb-20 w-full h-full md:hover:scale-105 transition-all ease-out duration-200 ${rendered ? "opacity-100 scale-100" : "opacity-0 scale-0"}`}>
+		<Link ref={ref1} href={`/projects/view?id=${project.slug}`} className={`flex flex-col justify-center items-center md:-mb-20 w-full lg:w-1/2 2xl:w-1/3 h-full md:hover:scale-105 transition-all ease-out duration-200 ${rendered ? "opacity-100 scale-100" : "opacity-0 scale-0"}`}>
 			<div className="flex w-full aspect-[16/10] relative md:-bottom-20 -z-10 px-4 pt-4 md:p-4">
 				<Image
 					src={project.thumbnail ? project.thumbnail : "/react-logo.png"}
@@ -110,17 +110,17 @@ export default function ProjectCatalog() {
 		<>
 			{featuredProjectMetadata ?
 				<div className="hidden md:flex w-full flex-col justify-center items-center">
-					<h1 className="flex w-full mt-8 text-lg text-center text-muted-foreground justify-center">
+					<h1 className="flex w-full mt-8 font-besley text-lg text-center text-muted-foreground justify-center">
 						~ Featured Project ~
 					</h1>
 					<FeaturedProjectCard project={featuredProjectMetadata} />
 				</div>
 			: null}
-			<h1 className="flex w-full mt-8 text-lg text-center text-muted-foreground justify-center">
+			<h1 className="flex w-full mt-8 font-besley text-lg text-center text-muted-foreground justify-center">
 				~ Full Project Catalog ~
 			</h1>
 			<div id="project-list-container"	
-				className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 py-4 pb-40 md:px-32 shadow-lg justify-items-center">
+				className="flex flex-row flex-wrap py-4 pb-40 md:px-32 shadow-lg justify-center">
 				{ projectsMetadata.map(project => <ProjectCard project={project} key={project.slug} />) }
 			</div>
 		</>

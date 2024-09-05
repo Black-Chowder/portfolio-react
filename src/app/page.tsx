@@ -8,12 +8,12 @@ import Contact from "@/components/contact";
 import { TbBrandGithub, TbBrandLinkedin, TbBrandItch, TbPhone, TbMail} from 'react-icons/tb'
 
 export default function Home() {
-	const images = projectsMetadata.map(proj => proj.thumbnail || "/projects/cppgameengine/TailSmashThumbnail.png")
+	const images = projectsMetadata.map(proj => proj.thumbnail)
   	return (
 		<>
 			<div className="flex flex-col md:flex-row md:m-10 justify-center gap-8">
 				<div className="flex justify-center flex-col rounded-xl">
-					<h1 className="flex justify-center font-besley text-center border-accent border-solid border-2 rounded-xl text-6xl bg-transparent backdrop-blur-sm p-4 mt-8 mb-0 z-10">Hello, I&apos;m Trevor</h1>
+					<h1 className="flex justify-center font-bold text-center border-secondary border-solid border-2 rounded-xl text-6xl bg-transparent backdrop-blur-sm p-4 mt-8 mb-0 z-10">Hello, I&apos;m Trevor</h1>
 					<Image
 						src="/portrait.jpg"
 						alt="Image of me, Trevor"
@@ -24,10 +24,10 @@ export default function Home() {
 					></Image>
 				</div>
 				<div className="flex flex-col md:w-1/3 justify-center">
-					<p className="m-4 mb-2 p-4 text-xl border-accent border-solid border-2 rounded-xl bg-transparent backdrop-blur-sm">I&apos;m a Junior at Johns Hopkins University, studying Computer Science. My favorite hobby is working on my various projects, especially coding video games.</p>
+					<p className="m-4 mb-2 p-4 text-xl border-secondary border-solid border-2 rounded-xl bg-transparent backdrop-blur-sm">I&apos;m a Junior at Johns Hopkins University, studying Computer Science. My favorite hobby is working on my various projects, especially coding video games.</p>
 					<div className="flex flex-col items-center">
 						<Link href='/projects' className="rounded-xl m-4">
-							<p className="p-3 text-xl border-accent border-solid border-2 bg-transparent backdrop-blur-md rounded-lg"><span className="underline text-primary">Click here</span> to check out my project catalog!</p>
+							<p className="p-3 text-xl border-secondary border-solid border-2 bg-transparent backdrop-blur-md rounded-lg"><span className="underline text-primary">Click here</span> to check out my project catalog!</p>
 							<div className="flex flex-row flex-wrap justify-center">
 								{images.map((img, i) =>
 									<Image

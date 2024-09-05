@@ -20,14 +20,12 @@ export const jobs: Job[] = [
         slug: "idtech",
         title: "Camp Instructor",
         company: "iD Tech",
-        location: "Manhattan, New York",
+        location: "New York, NY",
         start_date: new Date(2024, 5, 1),
-        end_date: new Date(), //new Date(2024, 7, 1),
+        end_date: new Date(2024, 7, 1),
         description: [
-            "Led lessons for groups of 9-12 year olds on programming for Roblox in Lua. ",
-            "Effectively communicated difficult topics in easy to understand terms. ",
-            "Created custom projects suited for each child. ",
-            "Attentively ensured the safety and engagement of all students. "
+            "Instructed teens to code in Lua with Roblox Studio. Promoted to teach Unreal Engine. ",
+            "Communicated difficult programming topics in easy to understand terms tailored to individual students. "
         ]
     },
     {
@@ -38,30 +36,30 @@ export const jobs: Job[] = [
         start_date: new Date(2023,4,22),
         end_date: new Date(2023,6,26),
         description: [
-            "Integrated the NVIDIA Cuda toolkit in a high performance computer system. ",
-            "Updated C functions to improve data sharing between nodes by utilizing the GPU. ",
-            "Conducted performance improvement analysis and unit testing. ",
+            "Lab assistant for high performance computing research tasked with optimization and performance analysis. ",
+            "Integrated NVIDIA Cuda toolkit and updated C/C++ functions to improve data sharing by utilizing the GPU. ",
+            "Explored ways to visualize GitHub collaboration in a classroom setting. "
         ]
     },
     {
         slug: "delineo",
         title: "Research Lab Assistant",
         company: "Johns Hopkins \"Delineo\" Pandemic Research",
-        location: "Baltimore, Maryland",
+        location: "Baltimore, MD",
         start_date: new Date(2023,0,1),
         end_date: new Date(2023,4,12),
         description: [
-            "Pandemic Simulation Research - led by Professor Dr. Dahbura. ",
-            "Led the Unity sub-team which improved the \"gamified\" version of the simulation. ",
-            "As a team leader, I set deadlines, arranged team meetings and assigned workstreams. ",
-            "Coded new features to the existing codebase such as sanitizing retrieved server data. ",
+            "Headed Unity sub-team responsible for improving “gamified” version of the pandemic simulation. ",
+            "As a sub-team lead, I set deadlines, arranged team meetings and assigned work to meet sprint deadlines. ",
+            "Responsible for over 40 commits to the established Azure DevOps repository. ",
+            "Programmed pandemic event system, handling of server simulation data, and pre-existing bug fixes. "
         ]
     },
     {
         slug: "mgagolf",
         title: "Intern",
         company: "Metropolitan Golf Association",
-        location: "White Plains, New York",
+        location: "White Plains, NY",
         start_date: new Date(2022, 4, 1),
         end_date: new Date(2022, 5, 1),
         description: [

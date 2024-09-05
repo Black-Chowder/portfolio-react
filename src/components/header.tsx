@@ -32,11 +32,12 @@ function Header() {
     <div className="hidden md:flex sticky top-0 items-center p-3 w-full shadow-md backdrop-blur-lg z-20" >
       <Link href="/">
         <Image
-          src="/react-logo.png"
+          src="/portrait.jpg"
           alt="logo"
           width="50"
           height="50"
           priority
+          className="aspect-square object-cover rounded-full"
         />
       </Link>
       <div className="w-16"></div> {/* padding between image and headers */}

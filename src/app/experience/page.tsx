@@ -14,19 +14,18 @@ function ExperiencePoint({
 	return (
 		<div className="flex flex-row justify-start mb-8 w-full">
 			<div className="flex mt-1 mb-1 mr-4 border-r-2 border-accent-foreground"></div>
-			<div className="flex flex-col w-full"> { /* info section */}
+			<div className="flex flex-col w-full md:w-[820px] max-w-[95vw]"> { /* info section */}
 				<div className="flex flex-col justify-start mb-1">
-					<div className="flex justify-between align-bottom">
+					<div className="flex flex-col md:flex-row justify-between align-bottom">
 						<h1 className="mr-5 font-semibold text-2xl"> { job.title } </h1>
-						<div className="flex flex-row justify-end">
-							<p className="text-right text-xl">
-											{`${job.start_date.toLocaleString("en-US", dateFormatOptions)}`} &ndash; {job.end_date.getFullYear() == new Date().getFullYear() && job.end_date.getMonth() == new Date().getMonth()
-								? "Present" : `${job.end_date.toLocaleString("en-US", dateFormatOptions)}`}</p>
-						</div>
+						<p className="md:text-right text-xl">
+										{`${job.start_date.toLocaleString("en-US", dateFormatOptions)}`} &ndash; {job.end_date.getFullYear() == new Date().getFullYear() && job.end_date.getMonth() == new Date().getMonth()
+							? "Present" : `${job.end_date.toLocaleString("en-US", dateFormatOptions)}`}
+						</p>
 					</div>
-					<div className="flex justify-between align-bottom">
+					<div className="flex flex-col md:flex-row justify-between align-bottom">
 						<h2 className="text-lg"> { job.company } </h2>
-						<h2 className="text-base"> { job.location } </h2>
+						<h2 className="text-base md:text-right"> { job.location } </h2>
 					</div>
 				</div>
 				<ul>
@@ -67,8 +66,8 @@ export default function Experience() {
 	}
 
     return (
-		<div className="flex flex-col flex-grow py-4 px-6 md:px-32 bg-opacity-70 backdrop-blur-sm shadow-lg dark:shadow-neutral-800">
-			<h1 className="flex w-full my-12 justify-center text-4xl font-medium">
+		<div className="flex flex-col py-4 px-4 md:px-32 bg-opacity-70 backdrop-blur-sm shadow-lg dark:shadow-neutral-800">
+			<h1 className="flex w-full my-12 justify-center text-4xl font-medium font-besley">
 				Work Experience
 			</h1>
 			{expAndYearGaps}

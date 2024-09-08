@@ -36,9 +36,10 @@ export default function Home() {
 						<div className="hidden md:flex w-full flex-col">
 							<ProjectsDeck/>
 						</div>
-						<p className="md:hidden p-3 text-xl border-secondary border-solid border-2 bg-transparent backdrop-blur-md rounded-lg"><Link href={"/projects"} className="underline text-primary">Click here</Link> to check out my project catalog!</p>
+						<p className="md:hidden p-3 text-xl border-secondary border-solid border-2 bg-transparent backdrop-blur-md rounded-lg"><Link href={"/projects"} className="underline text-primary">Click here</Link> to check out my full project catalog!</p>
 						<div className="md:hidden flex flex-row flex-wrap justify-center">
 							{images.map((img, i) =>
+								i < 4 ?
 								<Image
 									key={i}
 									src={img}
@@ -46,9 +47,10 @@ export default function Home() {
 									width={250}
 									height={0}
 									quality={40}
-									className={"aspect-[16/10] object-cover object-top w-1/3"}
+									className={"aspect-[16/10] object-cover object-top w-1/2"}
 								>
 								</Image>
+								: <></>
 							)}
 						</div>
 					</div>

@@ -36,11 +36,11 @@ export default function RootLayout({
             {/* Header disables on mobile, Hamburger enables on mobile */}
             <Header />
             <Hamburger />
-            <div className="flex flex-row w-full p-4 items-center justify-center gap-1">
+            {/* <div className="flex flex-row w-full p-4 items-center justify-center gap-1">
               <TbAlertTriangle className="h-full aspect-square" />
               Site is still under construction
               <TbAlertTriangle className="h-full aspect-square" />
-            </div>
+            </div> */}
             <main className="flex flex-col flex-auto items-center">
                 {children}
             </main>

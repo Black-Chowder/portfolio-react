@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/header";
 import Hamburger from "@/components/hamburger";
 import Background from "@/components/background";
+import { TbAlertTriangle } from "react-icons/tb";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,6 +36,11 @@ export default function RootLayout({
             {/* Header disables on mobile, Hamburger enables on mobile */}
             <Header />
             <Hamburger />
+            <div className="flex flex-row w-full p-4 items-center justify-center gap-1">
+              <TbAlertTriangle className="h-full aspect-square" />
+              Site is still under construction
+              <TbAlertTriangle className="h-full aspect-square" />
+            </div>
             <main className="flex flex-col flex-auto items-center">
                 {children}
             </main>

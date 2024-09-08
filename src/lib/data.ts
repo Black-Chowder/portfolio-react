@@ -13,6 +13,10 @@ export const navData: NavData[] = [
         ext: "/projects",
         name: "Projects",
     },
+    {
+        ext: "/contact",
+        name: "Contact Me",
+    }
 ]
 
 export const jobs: Job[] = [
@@ -114,19 +118,6 @@ export const projectsMetadata: Project[] = [
         ]
     },
     {
-        slug: "dbfsite",
-        title: "Club Website - DBF",
-        end_date: new Date(2024, 6, 15),
-        description: "Website I led the creation of for the club I am president of (Design Build Fly).",
-        thumbnail: "/projects/dbfsite/homepage.jpg",
-        tags: [
-            "Group", "Coding", "Website"
-        ],
-        links: [
-            "https://jhu-dbf-website.pages.dev/" // TODO (probably needs updating when we publish it?)
-        ]
-    },
-    {
         slug: "portfoliosite",
         title: "Portfolio Site (this!)",
         end_date: new Date(),
@@ -150,6 +141,19 @@ export const projectsMetadata: Project[] = [
         ],
         links: [
             "tobbot2.itch.io", // TODO
+        ]
+    },
+    {
+        slug: "dbfsite",
+        title: "Club Website - DBF",
+        end_date: new Date(2024, 6, 15),
+        description: "Website I led the creation of for the club I am president of (Design Build Fly).",
+        thumbnail: "/projects/dbfsite/homepage.jpg",
+        tags: [
+            "Group", "Coding", "Website"
+        ],
+        links: [
+            "https://jhu-dbf-website.pages.dev/" // TODO (probably needs updating when we publish it?)
         ]
     },
     {

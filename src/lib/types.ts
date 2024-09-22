@@ -44,3 +44,8 @@ export type ContactData = {
     href: string;
     icon: React.JSX.Element,
 }
+
+export type StatData = {
+    label: string;
+    value: string;
+}

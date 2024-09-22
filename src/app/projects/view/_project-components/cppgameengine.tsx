@@ -52,7 +52,7 @@ function Report() {
             
             <object data="/projects/cppgameengine/tailsmashreport.pdf" type="application/pdf" className="flex flex-auto h-screen">
                 <p>
-                    Resume PDF failed to load. Try
+                    Report PDF failed to load. Try
                     <Link href="/projects/cppgameengine/tailsmashreport.pdf"> clicking here instead! </Link>
                     or email me at trevoroblack@gmail.com
                 </p>
@@ -101,6 +101,7 @@ export default function CppGameEngine() {
             <Overview />
             <Report />
             <Journey />
+            <div className="h-[25vh]"></div>
         </div>
     )
 }

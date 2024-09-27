@@ -1,13 +1,19 @@
+import ExternalLinks from "@/components/external-links";
 import ModelViewer from "@/components/ModelViewer";
 import Stats from "@/components/stats";
 import Image from "next/image";
-import Link from "next/link";
+import { TbPlaneDeparture, TbPlaneTilt } from "react-icons/tb";
 
 function SeeMore() {
     return (
-        <>
-            {/* TODO: add links to download, see src code, etc. */}
-        </>
+        <div id="seemore" className="w-screen self-center mt-8">
+            <ExternalLinks header="See More" links= {
+                [
+                    { href: 'https://jhu-dbf.github.io/', text: 'Team Website', icon: <TbPlaneTilt/>},
+                    { href: 'https://www.aiaa.org/dbf', text: 'AIAA DBF Website', icon: <TbPlaneDeparture/>},
+                ]
+            }/>
+        </div>
     )
 }
 
@@ -61,6 +67,8 @@ function Competition2025() {
             <Stats data={[
                 {label:"Budget", value:"$5,200"},
                 {label:"Members", value:"20"},
+                // {label:"Out of XXX Teams", value:"XX"},
+                {label:"Arizona", value:"Tuscon"}
             ]} />
         </>
     )
@@ -79,7 +87,8 @@ function Competition2024() {
             <Stats data={[
                 {label:"Budget", value:"$1,500"},
                 {label:"Members", value:"9"},
-                {label:"Out of 149 Teams", value:"67th"}
+                {label:"Out of 149 Teams", value:"67th"},
+                {label:"Kansas", value:"Wichita"}
             ]} />
 
             <p>Especially considering the small team size and low budget solely consisting of leftover money from a previous year, we were enthralled with our performance. Especially because our peers from different schools had teams with 20x our funding and 3x our team size.</p>
@@ -89,19 +98,19 @@ function Competition2024() {
 export default function DbfPlane() {
     return (
         <div className="flex flex-col w-full">
-            <SeeMore />
             <h2 id="contents" className="text-3xl mt-10">Contents</h2>
             <ul className="text-xl">
                 <li className="relative list-disc left-8"><button onClick={() => document.querySelector('#planemodel2024')?.scrollIntoView()}>Plane Model 2024</button></li>
                 <li className="relative list-disc left-8"><button onClick={() => document.querySelector('#overview')?.scrollIntoView()}>Overview</button></li>
                 <li className="relative list-disc left-8"><button onClick={() => document.querySelector('#competition2025')?.scrollIntoView()}>Competition 2025</button></li>
                 <li className="relative list-disc left-8"><button onClick={() => document.querySelector('#competition2024')?.scrollIntoView()}>Competition 2024</button></li>
+                <li className="relative list-disc left-8"><button onClick={() => document.querySelector('#seemore')?.scrollIntoView()}>See More</button></li>
             </ul>
             <PlaneModel2024 />
             <Overview />
             <Competition2025 />
             <Competition2024 />
-            <div className="h-[25vh]"></div>
+            <SeeMore />
         </div>
     )
 }

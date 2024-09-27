@@ -1,11 +1,18 @@
+import ExternalLinks from "@/components/external-links";
 import Image from "next/image";
 import Link from "next/link";
+import { TbCode, TbDeviceGamepad } from "react-icons/tb";
 
 function SeeMore() {
     return (
-        <>
-            {/* TODO: add links to download, see src code, etc. */}
-        </>
+        <div id="seemore" className="w-screen self-center mt-8">
+            <ExternalLinks header="See More" links= {
+                [
+                    { href: 'https://github.com/tobbot2/tailsmash', text: 'Source Code (on GitHub)', icon: <TbCode/>},
+                    { href: 'https://tobbot2.itch.io/Tail-Smash', text: 'Download & Play (on Itch.io)', icon: <TbDeviceGamepad/>},
+                ]
+            }/>
+        </div>
     )
 }
 
@@ -91,17 +98,17 @@ function Journey() {
 export default function CppGameEngine() {
     return (
         <div className="flex flex-col w-full">
-            <SeeMore />
             <h2 id="contents" className="text-3xl mt-10">Contents</h2>
             <ul className="text-xl">
                 <li className="relative list-disc left-8"><button onClick={() => document.querySelector('#overview')?.scrollIntoView()}>Overview</button></li>
                 <li className="relative list-disc left-8"><button onClick={() => document.querySelector('#report')?.scrollIntoView()}>Technical Report</button></li>
                 <li className="relative list-disc left-8"><button onClick={() => document.querySelector('#journey')?.scrollIntoView()}>Journey</button></li>
+                <li className="relative list-disc left-8"><button onClick={() => document.querySelector('#seemore')?.scrollIntoView()}>See More</button></li>
             </ul>
             <Overview />
             <Report />
             <Journey />
-            <div className="h-[25vh]"></div>
+            <SeeMore />
         </div>
     )
 }

@@ -1,28 +1,5 @@
 'use client'
 
-/**
- * This component heavily uses three.js, more specifically react-three fiber (plus drei extension).
- * Because of this, it requires the react plugin for astro ($npx astro add react).
- * 
- * Note that the Model component MUST be separate from the ModelViewer or else things don't work
- * for some reason. -> it just needs the <primitive> and gltf = useGLTF() parts to be separate I
- * think. Idk why.
- * 
- * The data in here was manually set for a specific model (PlaneFull24.gltf). So for other
- * models, properties must be changed like position, rotation, etc. These should probably be
- * passed through in a nicer way instead of hard coded.
- * 
- * Many sections are commented out, labelled "highlight model part on hover". These parts contain code
- * for highlighting whichever part of the model is being hovered over by the cursor. It was removed
- * because it didn't work the way we wanted it to, but the code is preserved because I worked hard on
- * it and want to save it just in case I want it in the future, I guess. There are some straggling
- * parts that are not uncommented but they are a bit too mixed with other code for me to want to
- * remove them.
- */
-
-// highlight model part on hover
-// import * as THREE from 'three'
-
 import { useState, Suspense } from 'react'
 import { Canvas } from "@react-three/fiber";
 import { useGLTF, OrbitControls, Grid, Stage } from "@react-three/drei";

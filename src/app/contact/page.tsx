@@ -1,10 +1,11 @@
 'use client'
 
-import Contact from "@/components/contact"
+import ExternalLinks from "@/components/external-links"
+import { contactLinks } from "@/lib/data"
 
 export default function ContactPage() {
 
     return <>
-        <Contact/>
+        <ExternalLinks header="Contact Me" links={contactLinks}/>
     </>
 }

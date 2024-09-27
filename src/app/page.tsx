@@ -3,9 +3,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { projectsMetadata } from "@/lib/data";
-import Contact from "@/components/contact";
+import { contactLinks, projectsMetadata } from "@/lib/data";
 import ProjectsDeck from "@/components/projects-deck";
+import ExternalLinks from "@/components/external-links";
 
 export default function Home() {
 	const images = projectsMetadata.map(proj => proj.thumbnail)
@@ -57,7 +57,7 @@ export default function Home() {
 				</div>
 			</div>
 		</div>
-		<Contact/>
+		<ExternalLinks header="Contact Me" links={contactLinks}/>
 	</>
 	);
 }

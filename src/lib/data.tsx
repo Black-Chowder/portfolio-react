@@ -1,4 +1,5 @@
-import { Job, Project, NavData, FeaturedProject } from "./types"
+import { TbMail, TbPhone, TbBrandLinkedin, TbBrandGithub, TbBrandItch } from "react-icons/tb"
+import { Job, Project, NavData, FeaturedProject, ContactData } from "./types"
 
 export const navData: NavData[] = [
     {
@@ -17,6 +18,14 @@ export const navData: NavData[] = [
         ext: "/contact",
         name: "Contact Me",
     }
+]
+
+export const contactLinks: ContactData[] = [
+    { href: 'mailto:trevoroblack@gmail.com', text: 'trevoroblack@gmail.com', icon: <TbMail/>},
+    { href: 'tel:+19174288262', text: '917-428-8262', icon: <TbPhone/>},
+    { href: 'https://linkedin.com/in/trevoroblack', text: 'LinkedIn', icon: <TbBrandLinkedin/> },
+    { href: 'https://github.com/TobBot2', text: 'GitHub', icon: <TbBrandGithub/>},
+    { href: 'https://tobbot2.itch.io', text: 'Itch.io', icon: <TbBrandItch/>},
 ]
 
 export const jobs: Job[] = [

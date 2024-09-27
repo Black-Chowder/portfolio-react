@@ -12,9 +12,9 @@ function ExperiencePoint({
 	};
 
 	return (
-		<div className="flex flex-row justify-start mb-8 w-full">
+		<div className="flex flex-row justify-start mb-8 w-full font-besley">
 			<div className="flex mt-1 mb-1 mr-4 border-r-2 border-accent-foreground"></div>
-			<div className="flex flex-col w-full md:w-[820px] max-w-[95vw]"> { /* info section */}
+			<div className="flex flex-col w-full md:w-[855px] max-w-[95vw]"> { /* info section, 855 px for Besley font, 820 for raleway*/} 
 				<div className="flex flex-col justify-start mb-1">
 					<div className="flex flex-col md:flex-row justify-between align-bottom">
 						<h1 className="mr-5 font-semibold text-2xl"> { job.title } </h1>
@@ -40,7 +40,7 @@ function ExperiencePoint({
 }
 
 function YearDivider({ year } : { year: number }) {
-	return <div className="flex justify-center items-center w-full text-3xl font-extrabold opacity-25">
+	return <div className="flex justify-center items-center w-full text-3xl font-extrabold opacity-25 font-besley">
 		{year}
 	</div>
 }

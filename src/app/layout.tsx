@@ -10,7 +10,7 @@ import { TbAlertTriangle } from "react-icons/tb";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Portfolio - Trevor Black",
+  title: "Portfolio - Ian Black",
   description: "Meet the Computer Science major through his self-coded website.",
 };
 

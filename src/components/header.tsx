@@ -32,7 +32,7 @@ function Header() {
     <div className="hidden md:flex sticky top-0 items-center p-3 w-full shadow-md backdrop-blur-lg z-20" >
       <Link href="/">
         <Image
-          src="/portrait.jpg"
+          src="/headshot02.jpeg"
           alt="logo"
           width="50"
           height="50"

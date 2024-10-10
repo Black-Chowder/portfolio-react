@@ -21,63 +21,58 @@ export const navData: NavData[] = [
 ]
 
 export const contactLinks: ContactData[] = [
-    { href: 'mailto:trevoroblack@gmail.com', text: 'trevoroblack@gmail.com', icon: <TbMail/>},
-    { href: 'tel:+19174288262', text: '917-428-8262', icon: <TbPhone/>},
-    { href: 'https://linkedin.com/in/trevoroblack', text: 'LinkedIn', icon: <TbBrandLinkedin/> },
-    { href: 'https://github.com/TobBot2', text: 'GitHub', icon: <TbBrandGithub/>},
-    { href: 'https://tobbot2.itch.io', text: 'Itch.io', icon: <TbBrandItch/>},
+    { href: 'mailto:iblack@u.rochester.edu', text: 'iblack@u.rochester.edu', icon: <TbMail/>},
+    { href: 'tel:+16462416683', text: '646-241-6683', icon: <TbPhone/>},
+    { href: 'https://www.linkedin.com/in/ian-black-1924921a9/', text: 'LinkedIn', icon: <TbBrandLinkedin/> },
+    { href: 'https://github.com/Black-Chowder', text: 'GitHub', icon: <TbBrandGithub/>},
+    { href: 'https://black-chowder.itch.io/', text: 'Itch.io', icon: <TbBrandItch/>},
 ]
 
 export const jobs: Job[] = [
     {
-        slug: "idtech",
-        title: "Camp Instructor",
-        company: "iD Tech",
+        slug: "cdw",
+        title: "Application Developer Intern",
+        company: "CDW",
+        location: "Chicago, IL",
+        start_date: new Date(2023, 4, 1),
+        end_date: new Date(2023, 7, 1),
+        description: [
+            "Built and tested new features using jQuery, React and Postman",
+            "Maintained NuGet and npm configurations to keep projects inline with security protocols",
+            "Workedin a SCRUM AGILE environment"
+        ]
+    },
+    {
+        slug: "ta",
+        title: "Teaching Assistant for Data Structures & Algorithms",
+        company: "University of Rochester",
+        location: "Rochester, NY",
+        start_date: new Date(2022, 7, 1),
+        end_date: new Date(2022, 11, 1),
+        description: [
+            "Gradedcoding assignments in Java",
+            "Led bi-weekly lab sessions",
+            "Assisted students individually to help with homework and understanding of course material"
+        ]
+    },
+    {
+        slug: "pt",
+        title: "PT Assistant",
+        company: "Professional Physical Therapy",
         location: "New York, NY",
-        start_date: new Date(2024, 5, 1),
-        end_date: new Date(2024, 7, 1),
+        start_date: new Date(2021, 4, 1),
+        end_date: new Date(2021, 7, 1),
         description: [
-            "Instructed teens to code in Lua with Roblox Studio. Promoted to teach Unreal Engine. ",
-            "Communicated difficult programming topics in easy to understand terms tailored to individual students. "
         ]
     },
     {
-        slug: "uc3m",
-        title: "Research Lab Assistant",
-        company: "Charles III University of Madrid",
-        location: "Madrid, Spain",
-        start_date: new Date(2023,4,22),
-        end_date: new Date(2023,6,26),
+        slug: "mizuho",
+        title: "Programming Intern",
+        company: "Mizuho Securities",
+        location: "New York, NY",
+        start_date: new Date(2018, 4, 1),
+        end_date: new Date(2018, 8, 1),
         description: [
-            "Lab assistant for high performance computing research tasked with optimization and performance analysis. ",
-            "Integrated NVIDIA Cuda toolkit and updated C/C++ functions to improve data sharing by utilizing the GPU. ",
-            "Explored ways to visualize GitHub collaboration in a classroom setting. "
-        ]
-    },
-    {
-        slug: "delineo",
-        title: "Research Lab Assistant",
-        company: "Johns Hopkins \"Delineo\" Pandemic Research",
-        location: "Baltimore, MD",
-        start_date: new Date(2023,0,1),
-        end_date: new Date(2023,4,12),
-        description: [
-            "Headed Unity sub-team responsible for improving “gamified” version of the pandemic simulation. ",
-            "As a sub-team lead, I set deadlines, arranged team meetings and assigned work to meet sprint deadlines. ",
-            "Responsible for over 40 commits to the established Azure DevOps repository. ",
-            "Programmed pandemic event system, handling of server simulation data, and pre-existing bug fixes. "
-        ]
-    },
-    {
-        slug: "mgagolf",
-        title: "Intern",
-        company: "Metropolitan Golf Association",
-        location: "White Plains, NY",
-        start_date: new Date(2022, 4, 1),
-        end_date: new Date(2022, 5, 1),
-        description: [
-            "Updated website by streamlining data pipelines for renewing information and fixing various bugs. ",
-            "Condensed decades of tournament data for easy analysis and manipulation using Excel formulas. "
         ]
     },
 ]

@@ -42,5 +42,7 @@ export function getProjectTagBorderColor(tag: ProjectTag) {
 			return "border-[saddlebrown]";
 		case "WIP":
 			return "border-[khaki]";
+		case "AI":
+			return "border-[crimson]";
 	}
 }

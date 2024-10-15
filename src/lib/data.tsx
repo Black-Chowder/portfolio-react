@@ -95,17 +95,16 @@ export const featuredProjectMetadata: FeaturedProject = {
 
 export const projectsMetadata: Project[] = [
     {
-        slug: "cppgameengine",
-        title: "C++ Game Engine",
+        slug: "contextsteering2d",
+        title: "Context Steering 2D",
         end_date: new Date(2023, 1, 12),
-        description: "Game I created only using C++ and the SFML library for rendering and audio.",
-        thumbnail: "/projects/cppgameengine/TailSmashThumbnail.png",
+        description: "Library to help AI agents navigate 2D space",
+        thumbnail: "/projects/contextsteering2d/RepulsionBlock.jpg",
         tags: [
-            "Coding", "Game", "Solo",
+            "Coding", "AI", "Solo",
         ],
         links: [
-            "tobbot2.itch.io/tail-smash",
-            "github.com/tobbot2/tailsmash",
+            "https://github.com/Black-Chowder/ContextSteering2D",
         ]
     },
     {

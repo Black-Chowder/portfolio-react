@@ -95,6 +95,19 @@ export const featuredProjectMetadata: FeaturedProject = {
 
 export const projectsMetadata: Project[] = [
     {
+        slug: "superhotsnake",
+        title: "Superhot Snake",
+        end_date: new Date(),
+        description: "A snake game with a time-manipulation twist",
+        thumbnail: "/projects/superhotsnake/banner.png",
+        tags: [
+            "Coding", "Game", "Solo"
+        ],
+        links: [
+            "https://black-chowder.itch.io/superhot-snake"
+        ]
+    },
+    {
         slug: "contextsteering2d",
         title: "Context Steering 2D",
         end_date: new Date(2023, 1, 12),
@@ -105,19 +118,6 @@ export const projectsMetadata: Project[] = [
         ],
         links: [
             "https://github.com/Black-Chowder/ContextSteering2D",
-        ]
-    },
-    {
-        slug: "dbfplane",
-        title: "Club RC Plane - DBF",
-        end_date: new Date(),
-        description: "RC plane made by the club I am president of (Design Build Fly).",
-        thumbnail: "/projects/dbfplane/thumbnail.jpg",
-        tags: [
-            "Group", "3D Design"
-        ],
-        links: [
-            "https://jhu-dbf-website.pages.dev/" // TODO (probably needs updating when we publish it?) 
         ]
     },
     {

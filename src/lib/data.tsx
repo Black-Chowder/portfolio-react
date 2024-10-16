@@ -121,16 +121,16 @@ export const projectsMetadata: Project[] = [
         ]
     },
     {
-        slug: "portfoliosite",
-        title: "Portfolio Site (this!)",
+        slug: "deepisbig",
+        title: "Deep Is Big",
         end_date: new Date(),
-        description: "Website I made using React, NextJS, and Shadcn.",
-        thumbnail: "/projects/portfoliosite/homepage.png",
+        description: "Submission for the 2024 GMTK Game Jam",
+        thumbnail: "/projects/deepisbig/DeepIsBigThumbnail.png",
         tags: [
-            "Coding", "Solo", "Website"
+            "Coding", "Game", "Group"
         ],
         links: [
-            "github.com/tobbot2/portfolio-react",
+            "https://black-chowder.itch.io/deep-is-big",
         ]
     },
     {

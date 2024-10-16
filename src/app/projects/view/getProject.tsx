@@ -2,6 +2,8 @@
 import DbfPlane from "./_project-components/dbfplane";
 import ContextSteering2D from "./_project-components/contextsteering2D";
 import SuperhotSnake from "./_project-components/superhotsnake";
+import DeepIsBig from "./_project-components/deepisbig";
+
 
 export function getProjectNodes(slug: string) {
 	switch (slug) {
@@ -11,6 +13,8 @@ export function getProjectNodes(slug: string) {
 			return <DbfPlane />;
 		case "superhotsnake":
 			return <SuperhotSnake />;
+		case "deepisbig":
+			return <DeepIsBig />;
 	}
 
 	return undefined;

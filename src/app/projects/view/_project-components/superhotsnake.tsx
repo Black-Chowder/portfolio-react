@@ -34,7 +34,7 @@ function Overview() {
                 />
             </div>
 
-            <p className="my-5">This project took a few months however this was during school so the majority of the time was spent juggling working on the project versus school work. The project was only meant to be a short, fun game where I finish every aspect (including often neglected parts, i.e. menus, sound effects, and visual effects). Despite the small scope, there were many opportunities to learn new technologies and master new aspects of familiar ones.  Here's a basic overview of the technology used in this project:</p>
+            <p className="my-5">This project took a few months however this was during school so the majority of the time was spent juggling working on the project versus school work. The project was only meant to be a short, fun game where I finish every aspect (including often neglected parts, i.e. menus, sound effects, and visual effects). Despite the small scope, there were many opportunities to learn new technologies and master new aspects of familiar ones.  Here&apos;s a basic overview of the technology used in this project:</p>
             <ul>
                 <li className="relative list-disc left-8">MonoGame XNA - A C# .NET Framework for graphics, audio, input, and other low-level functionality.</li>
                 <li className="relative list-disc left-8">HLSL - The shader language of choice for effects implemented on the GPU</li>
@@ -103,7 +103,7 @@ function Journey() {
                     unoptimized
                 />
             </div>
-            <p className="my-5">To explain what's going on briefly, here are the effects as they appear:</p>
+            <p className="my-5">To explain what&apos;s going on briefly, here are the effects as they appear:</p>
             <ul className="mx-10">
                 <li className="list-decimal">Horizontal Gradient</li>
                 <li className="list-decimal">Horizontal sine wave</li>

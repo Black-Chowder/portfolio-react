@@ -52,7 +52,7 @@ function HowToPlay() {
             <h2 id="howtoplay" className="text-3xl mt-10">How To Play</h2>
 
             <p className="my-5">Catch as many fish as possible before time runs out</p>
-            <p className="my-5">Make sure the line doesn't break</p>
+            <p className="my-5">Make sure the line doesn&apos;t break</p>
             <p className="my-5">Remember: the deeper you are, the bigger they get!</p>
             <br/>
             <ul>

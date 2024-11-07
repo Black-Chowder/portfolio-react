@@ -36,7 +36,7 @@ function Overview() {
             <p className="my-5">Much of the code was inspired from this article:</p>
             <a href="http://www.gameaipro.com/GameAIPro2/GameAIPro2_Chapter18_Context_Steering_Behavior-Driven_Steering_at_the_Macro_Scale.pdf">http://www.gameaipro.com/GameAIPro2/GameAIPro2_Chapter18_Context_Steering_Behavior-Driven_Steering_at_the_Macro_Scale.pdf</a>
             <br></br>
-            <p className="my-5">Here's an overview of some of the technology used in this project:</p>
+            <p className="my-5">Here&apos;s an overview of some of the technology used in this project:</p>
             <ul>
                 <li className="relative list-disc left-8">MonoGame XNA - Framework for graphics and standard for classes such as vectors</li>
                 <li className="relative list-disc left-8">Visual Studio Community - My IDE of choice when coding in C# in large part due to its ease of building the executable and dealing with importing libraries.</li>
@@ -65,10 +65,10 @@ function UserGuide() {
             <p className="my-5">There are generally two types of context vectors.  Attraction and repulsion vectors.</p>
             <p className="my-5">They are both the same object, only with a boolean to change its attraction or repulsion status</p>
             <code>
-                //Constructs attraction vector<br/>
+                # Constructs attraction vector<br/>
                 ContextVector acv = new ContextVector(x, y, true);<br/>
                 <br/>
-                //Constructs repulsion vector<br/>
+                # Constructs repulsion vector<br/>
                 ContextVector rcv = new ContextVector(x, y, false);
             </code>
             <p className="my-5">They have different parameters that can be edited after construction</p>

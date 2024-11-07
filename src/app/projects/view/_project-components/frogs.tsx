@@ -22,7 +22,7 @@ function Overview() {
         <>
             <h2 id="overview" className="text-3xl mt-10">Frogs</h2>
 
-            <p className="my-5">Frogs is a videogame I made using a custom 2D physics engine.  I'd been working on this engine for some time but this was the first game I implemented it in.  This game was a submission to one of my university&#39;s game jams, the theme being &#34;Frogs!&#34; which meant I was tasked with creating a game about frogs!  This game is a platformer in which you are a frog and must collect as many flies as possible by bouncing around and using your tongue to swing off of platforms.</p>
+            <p className="my-5">Frogs is a videogame I made using a custom 2D physics engine.  I&apos;d been working on this engine for some time but this was the first game I implemented it in.  This game was a submission to one of my university&#39;s game jams, the theme being &#34;Frogs!&#34; which meant I was tasked with creating a game about frogs!  This game is a platformer in which you are a frog and must collect as many flies as possible by bouncing around and using your tongue to swing off of platforms.</p>
 
             <div className="flex flex-row w-full items-center gap-5">
                 <Image
@@ -85,7 +85,7 @@ function Journey() {
             <h2 id="journey" className="text-3xl mt-10">Journey</h2>
 
             <p className="my-5">As stated previously, this game uses my own physics engine I made from scratch.  After fiddling around with static body collision, I found that any technique I implemeneted had trouble with fast-moving objects where an object ran the risk of phasing through walls if it were moving fast enough.  To fix thism, a ray-based implementation was necessary.  Most pre-built engines call this a &#34;continuous&#34; calculation method because it enables those fast-moving objects to collide with anything with increased accuracy at the cost of efficiency.</p>
-            <p className="my-5">This game was the first game I published to itch as part of my University's game jam with the theme Frogs</p>
+            <p className="my-5">This game was the first game I published to itch as part of my University&apos;s game jam with the theme Frogs</p>
             <p className="my-5">My original rigidbody system for the submission to the game jam did not use a ray-based approach but the updated system felt so much better than the previous system I went back and implemented it into Frogs!  Thanks to Sebastian Lague for making a wonderful explanation on Ray Marching</p>
             <p className="my-5">https://youtu.be/Cp5WWtMoeKg?si=gi5FRZVXT96Qji8s</p>
 

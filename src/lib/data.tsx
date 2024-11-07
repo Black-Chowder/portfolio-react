@@ -78,18 +78,17 @@ export const jobs: Job[] = [
 ]
 
 export const featuredProjectMetadata: FeaturedProject = {
-    slug: "cppgameengine",
-    title: "C++ Game Engine",
+    slug: "superhotsnake",
+    title: "Superhot Snake",
     end_date: new Date(2023, 1, 12),
-    description: "Game I created only using C++ and the SFML library for rendering and audio. Source code is on GitHub, or play it on Itch.io! Click for more info.",
-    thumbnail: "/projects/cppgameengine/TailSmashThumbnail.png",
-    img1: "/projects/cppgameengine/TailSmashAsteroids.png",
+    description: "A snake game with a time-manipulation twist!  Click for more info",
+    thumbnail: "/projects/superhotsnake/banner.png",
+    img1: "/projects/superhotsnake/gameplay1.gif",
     tags: [
         "Coding", "Game", "Solo",
     ],
     links: [
-        "tobbot2.itch.io/tail-smash",
-        "github.com/tobbot2/tailsmash",
+        "https://black-chowder.itch.io/superhot-snake",
     ]
 }
 
@@ -146,83 +145,4 @@ export const projectsMetadata: Project[] = [
             "https://black-chowder.itch.io/frogs", // TODO
         ]
     },
-    {
-        slug: "gamejams",
-        title: "Game-Jam Collection",
-        end_date: new Date(),
-        description: "Collection of video games I created in separate game jam events using Unity (C#).",
-        thumbnail: "/projects/gamejams/thumbnail.png",
-        tags: [
-            "Coding", "Game", "Group"
-        ],
-        links: [
-            "tobbot2.itch.io", // TODO
-        ]
-    },
-    {
-        slug: "dbfsite",
-        title: "Club Website - DBF",
-        end_date: new Date(2024, 6, 15),
-        description: "Website I led the creation of for the club I am president of (Design Build Fly).",
-        thumbnail: "/projects/dbfsite/homepage.jpg",
-        tags: [
-            "Group", "Coding", "Website"
-        ],
-        links: [
-            "https://jhu-dbf-website.pages.dev/" // TODO (probably needs updating when we publish it?)
-        ]
-    },
-    {
-        slug: "manhattanmap",
-        title: "Manhattan Map",
-        end_date: new Date(),
-        description: "Wooden lasercut map of Manhattan with LEDs where the subway lines are.",
-        thumbnail: "/projects/manhattanmap/thumbnail.jpg",
-        tags: [
-            "Coding", "3D Design", "Solo", "WIP"
-        ],
-        links: [
-            "github.com/tobbot2/manhattanmap"
-        ]
-    },
-    // {
-    //     slug: "jwsimulations",
-    //     title: "Physics Simulations",
-    //     end_date: new Date(2021, 5, 1),
-    //     description: "Collection of physics simulations to teach students in an interactive, \"gamified,\" way.",
-    //     thumbnail: "",
-    //     tags: [
-    //         "Coding", "Solo", "Class"
-    //     ],
-    //     links: [
-    //         "github.com/tobbot2/JWSimulations",
-    //         "" // TODO link to actual simulations site.
-    //     ]
-    // },
-    {
-        slug: "cathedral",
-        title: "Cathedral 3D Model",
-        end_date: new Date(2022, 2, 1),
-        description: "3D Model created in Blender with heavy research in Romanesque architecture.",
-        thumbnail: "/projects/cathedral/Classic.png",
-        tags: [
-            "3D Design", "Solo"
-        ],
-        links: [
-            "thingiverse.com", // TODO
-        ]
-    },
-    {
-        slug: "3dmodeling",
-        title: "Miscellaneous 3D Models",
-        end_date: new Date(2022, 4, 1),
-        description: "3D Models and renders created in Blender I have made by myself over the years.",
-        thumbnail: "/projects/3dmodeling/bluejaycampsite.png",
-        tags: [
-            "3D Design", "Solo"
-        ],
-        links: [
-            "thingiverse.com", // TODO
-        ]
-    }
 ]

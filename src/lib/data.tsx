@@ -134,6 +134,19 @@ export const projectsMetadata: Project[] = [
         ]
     },
     {
+        slug: "frogs",
+        title: "Frogs!",
+        end_date: new Date(),
+        description: "A game I developed using my own 2D physics engine for a game jam",
+        thumbnail: "/projects/frogs/TitleScreen_bigger.png",
+        tags: [
+            "Coding", "Game", 
+        ],
+        links: [
+            "https://black-chowder.itch.io/frogs", // TODO
+        ]
+    },
+    {
         slug: "gamejams",
         title: "Game-Jam Collection",
         end_date: new Date(),
